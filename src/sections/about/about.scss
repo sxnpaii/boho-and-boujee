@@ -1,0 +1,68 @@
+@use "../../App";
+
+section.innerAbout {
+    @include App.flexbox();
+    justify-content: center;
+    gap: 30px 70px;
+
+    .image {
+        max-width: 537px;
+        height: 777px;
+        position: relative;
+
+        img {
+            width: 100%;
+            // box-shadow: 0 0 50px 0 App.$primaryBgClr;
+            filter: drop-shadow(0px 4px 100px rgba(0, 0, 0, 0.25))
+        }
+
+        .text {
+            // max-height: 60px;
+            position: absolute;
+            left: -67px;
+            top: 80%;
+            @include App.head-propers();
+
+            @media (max-width:768px) {
+                max-height: 35px;
+            }
+            @media (max-width:480px) {
+                top: 65%;
+                left: 10px;
+            }
+
+            h2 {
+                @include App.headings();
+                // transform: translateY(-23px);
+            }
+        }
+
+    }
+
+    .text-right {
+        max-width: 623px;
+
+        h2 {
+            @include App.defText-2($weight: App.$ClearSans-B);
+            text-transform: uppercase;
+
+
+        }
+
+        .hr-line {
+
+            @include App.hr-line();
+        }
+
+        p {
+            @include App.defText-2();
+            font-size: 26px;
+            margin-bottom: 71px;
+        }
+
+        button {
+            @include App.primaryBtn();
+
+        }
+    }
+}

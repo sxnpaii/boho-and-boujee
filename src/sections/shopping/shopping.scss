@@ -1,0 +1,50 @@
+@use "../../App";
+
+section.innerShopping {
+    margin-top: 200px;
+    @include App.flexbox();
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+        @include App.defText-2($weight: App.$ClearSans-B);
+        text-align: center;
+        text-transform: uppercase;
+
+        &:not(.display-6) {
+
+            font-size: 20px;
+        }
+    }
+
+    .hr-line {
+        @include App.hr-line();
+    }
+
+    .shops {
+        @include App.flexbox();
+        justify-content: center;
+        gap: 30px;
+
+        @media (max-width:1645px) {
+            width: 70%;
+        }
+
+        @media (max-width:1158px) {
+            width: 90%;
+        }
+
+        @media (max-width:906px) {
+            width: 100%;
+
+        }
+    }
+
+    button.shop {
+        @include App.primaryBtn();
+        margin-top: 70px;
+    }
+
+
+
+}

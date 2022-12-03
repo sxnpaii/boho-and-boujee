@@ -1,0 +1,38 @@
+@use "../../App";
+
+section.innerFeatured{
+    @include App.flexbox();
+    flex-direction: column;
+    justify-content: center;
+    // padding: 95px 0;
+    h3.display-6{
+        @include App.defText-2($weight: App.$ClearSans-B);
+        text-transform: uppercase;
+    }
+    .hr-line{
+        @include App.hr-line();
+    }
+    .images{
+        @include App.flexbox();
+        justify-content: center;
+        gap: 30px;
+        min-height: 800px;
+        img{
+            z-index: 2;
+            width: 100%;
+            float: left;
+            max-width:382px;
+            @media (max-width:820px) {
+                width: 47%;
+            } 
+            @media (max-width:576px) {
+                width: 100%;
+            }
+        }
+    }
+    button{
+        @include App.primaryBtn();
+        margin-top: 85px;
+
+    }
+}

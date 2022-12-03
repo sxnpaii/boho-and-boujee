@@ -1,0 +1,75 @@
+@use "../../App";
+
+section.innerHero {
+    background: url(../../img/heroBg.png) no-repeat center center;
+    min-height: 803px;
+    // margin-top: -50px;
+    // z-index: 1;
+    position: relative;
+    max-width: 1620px;
+    margin: auto;
+
+
+    .imgs {
+        min-height: 554px;
+        max-width: 522px;
+        width: 100%;
+        // transform: translateY(455px);
+        z-index: 1;
+        position: relative;
+        top: 455px;
+        @media (max-width:576px) {
+            transform: translateY(255px);
+        }
+
+        img {
+            width: 100%;
+            // height: 554px;
+            // max-width: 522px;
+            position: absolute;
+        }
+
+        img.layer2 {
+            // top
+            left: 27px;
+
+            @media (max-width: 767px) {
+                left: 10px;
+            }
+        }
+
+        .text {
+            position: absolute;
+            top: 384px;
+            left: 73px;
+            max-width: 443px;
+            max-height: 60px;
+            background: App.$primaryBgClr;
+            @media (max-width:992px) {
+                max-height: 37px;
+                top: 360px;
+            }
+            @media (max-width:576px) {
+                top: 335px;
+            }
+
+            h2 {
+                text-align: center;
+                @include App.headings();
+                transform: translateY(-23px);
+                
+            }
+        }
+
+    }
+
+    a.shopThisLook {
+        position: absolute !important;
+        bottom: 22px;
+        right: 37px;
+        @include App.defText-1();
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration-line: underline;
+    }
+}

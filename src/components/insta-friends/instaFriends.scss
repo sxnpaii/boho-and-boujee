@@ -1,0 +1,51 @@
+@use "../../App";
+
+section.innerIgFriends {
+    @include App.flexbox();
+    flex-direction: column;
+
+    h3.display-6 {
+        @include App.defText-2($weight: App.$ClearSans-B);
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .hr-line {
+        @include App.hr-line($mrgn: auto);
+    }
+
+    .imgs {
+        @include App.flexbox();
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 80px;
+
+        @media (max-width:1645px) {
+            width: 70%;
+        }
+
+        @media (max-width:1158px) {
+            width: 90%;
+        }
+
+        @media (max-width:906px) {
+            width: 100%;
+
+        }
+
+        img {
+            width: 100%;
+            max-width: 382px;
+            float: left;
+
+            @media (max-width:818px) and (min-width:656px) {
+                max-width: 300px;
+            }
+        }
+    }
+
+    button {
+        @include App.primaryBtn();
+        margin-bottom: 65px;
+    }
+}

@@ -1,0 +1,192 @@
+// fonts
+@font-face {
+    font-family: 'Clear Sans Bold';
+    src:
+        url(./fonts/clearSans/ClearSans-Bold.ttf);
+
+}
+
+@font-face {
+    font-family: 'Clear Sans Light';
+    src:
+        url(./fonts/clearSans/ClearSans-Light.ttf);
+
+}
+
+@font-face {
+    font-family: 'Neue Haas Unica W1G';
+    src:
+        url("./fonts/neueHaasUnicaW1G/Neue\ Haas\ Unica\ W1G.ttf"),
+        url("./fonts/neueHaasUnicaW1G/Neue\ Haas\ Unica\ W1G\ Thin.ttf"),
+        url("./fonts/neueHaasUnicaW1G/Neue\ Haas\ Unica\ W1G\ Heavy.ttf"),
+    ;
+}
+
+@font-face {
+    font-family: 'Holland';
+    src: url(./fonts/Holland.ttf);
+}
+
+// variables
+$Holland: 'Holland';
+$ClearSans-L: 'Clear Sans Light';
+$ClearSans-B: 'Clear Sans Bold';
+$NeueW1G: 'Neue Haas Unica W1G';
+$primaryClr: #BDA37B;
+$primaryBgClr: rgba(189, 163, 123, 0.8);
+$Black: #000;
+$White: #fff;
+$t-prop: cubic-bezier(0.44, 0.43, 0.16, 1.07);
+
+// mixins
+@mixin primaryBtn() {
+    width: 241px;
+    height: 70px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    font-family: $ClearSans-B;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    background: $primaryClr;
+    color: $White;
+    transition: 330ms $t-prop;
+    border: 1px solid $primaryClr;
+
+    &:hover {
+        background: transparent;
+        color: $Black;
+
+        transform: skew(-7deg, -5deg);
+
+    }
+}
+
+@mixin secondaryBtn() {
+    width: 241px;
+    height: 70px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    font-family: $ClearSans-B;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    background: $Black;
+    color: $White;
+    border: 1px solid $Black;
+
+    &:hover {
+        background: transparent;
+        color: $Black;
+
+        transform: skew(7deg, 5deg);
+
+    }
+
+}
+
+@mixin flexbox($ai-c: center) {
+    display: flex;
+    align-items: $ai-c;
+    flex-wrap: wrap;
+}
+
+@mixin headings() {
+    font-family: $Holland;
+    font-style: normal;
+    font-weight: 400;
+
+}
+
+@mixin defText-1() {
+    font-family: $NeueW1G;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color: $Black;
+    text-decoration: none;
+}
+
+@mixin defText-2($weight: $ClearSans-L) {
+    font-family: $weight;
+    font-style: normal;
+    letter-spacing: 0.03em;
+    color: $Black;
+    text-decoration: none;
+
+}
+
+@mixin head-propers() {
+
+    h2.display-1 {
+        transform: translateY(-23px);
+        text-align: center;
+
+    }
+
+    background: $primaryBgClr;
+    max-height:60px;
+    padding: 0 10px 0 30px;
+}
+
+@mixin hr-line($mrgn: 0) {
+    width: 188px;
+    margin: 50px $mrgn;
+    border: 1px solid $primaryClr;
+}
+
+
+
+// basic params
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: 330ms $t-prop;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+p,
+a,
+b,
+ul,
+li,
+ol {
+    padding: 0;
+    margin: 0;
+}
+
+.App {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1650px;
+    margin: auto;
+}
+
+
+// app js styles
+section.About {
+    background: rgba(189, 163, 123, 0.15);
+    padding: 120px 0;
+    z-index: 5;
+    // margin-top: 100px;
+}

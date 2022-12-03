@@ -1,0 +1,58 @@
+@use "../../App";
+
+
+section.SignUp {
+    background: App.$primaryClr;
+}
+
+section.innerSignUp {
+    @include App.flexbox();
+    justify-content: space-evenly;
+    // gap: 50px 200px;
+    row-gap: 50px;
+    padding: 65px 0;
+    min-height: 295px;
+    max-width: 1385px;
+    margin: auto;
+
+    .text {
+        max-width: 490px;
+
+        h2.display-1 {
+            @include App.headings();
+            color: App.$White;
+            margin-bottom: 45px;
+        }
+
+        p {
+            @include App.defText-2();
+        }
+    }
+    form{
+        width: 47%;
+        @include App.flexbox($ai-c: flex-end);
+        flex-direction: column;
+
+        row-gap: 20px;
+        @media (max-width:950px) {
+            width: 70%;
+        }
+        @media (max-width:950px) {
+            width: 100%;
+            
+        }
+        
+        input{
+            width: 100%;
+            height: 70px;
+            padding: 16px 25px;
+            border: none;
+            @include App.defText-2();
+            font-size: 25px;
+            
+        }
+        button{
+            @include App.secondaryBtn();
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@use "../../App";
+
+.scrolled {
+    width: 383px;
+    // height: 440px;
+    border: 1px solid App.$primaryClr;
+
+    @media (max-width: 795px) {
+        width: 80%;
+    }
+
+    @media (max-width: 576px) {
+        width: 100%;
+    }
+
+
+    h3 {
+        margin: 13px 18px;
+        @include App.headings();
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration-line: underline;
+    }
+
+    img {
+        width: 100%;
+       
+    }
+}
